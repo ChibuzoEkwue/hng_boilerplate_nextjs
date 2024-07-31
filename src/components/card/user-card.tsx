@@ -13,6 +13,7 @@ interface User {
 }
 
 const UserCard = ({ user }: { user: User }) => {
+  
   const [isLogout, setIsLogout] = useState(false);
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const UserCard = ({ user }: { user: User }) => {
           onClick={() => setIsLogout(!isLogout)}
           className="flex h-full w-full items-center justify-center overflow-hidden rounded-full text-center text-xl capitalize"
         >
-          {user?.email[0]}
+          {user?.email}
         </CustomButton>
       )}
       <AnimatePresence>
